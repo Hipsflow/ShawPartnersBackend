@@ -10,8 +10,9 @@ class UsersController extends Controller
 {
     public function fetchUsersSince($user_id){
         $response = HTTP::get('https://api.github.com/users?since='. $user_id);
-        $users = $response->json();
-        
+
+        $users = json_decode($response->body());
+
         return $users;
     }
     
