@@ -15,8 +15,8 @@ use App\Http\Controllers\UsersController;
 |
 */
 
-Route::get('/users/{id}', [UsersController::class, 'fetchUsersSince']);
-Route::get('/users/{username}/details', [UsersController::class, 'fetchUsersDetails']);
-Route::get('/users/{username}/repos', [UsersController::class, 'fetchUsersRepos']);
+Route::get('api/users/{id}', [UsersController::class, 'fetchUsersSince']);
+Route::get('api/users/{username}/details', [UsersController::class, 'fetchUsersDetails']);
+Route::get('api/users/{username}/repos', [UsersController::class, 'fetchUsersRepos']);
 
 
